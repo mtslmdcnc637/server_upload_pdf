@@ -1,6 +1,7 @@
 const express = require("express");
 const fileUpload = require("express-fileupload");
 const pdfParse = require("pdf-parse")
+const port = process.env.PORT || 3000
 var cors = require('cors');
 
 const app = express();
@@ -18,4 +19,4 @@ app.post("/pdf", (req, res)=>{
 })
   
 
-app.listen(8080, ()=>{console.log("--------------on---------------")})
+app.listen(port, ()=>{console.log(port)})
